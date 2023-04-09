@@ -1,0 +1,50 @@
+{
+  "update_id": 577851930,
+  "callback_query": {
+    "id": "2536645327156502660",
+    "from": {
+      "id": 590608764,
+      "is_bot": false,
+      "first_name": "Grisha",
+      "last_name": "Batov",
+      "username": "diamondik21",
+      "language_code": "ru"
+    },
+    "message": {
+      "message_id": 129,
+      "from": {
+        "id": 5542958790,
+        "is_bot": true,
+        "first_name": "Last Adventure RPG",
+        "username": "last_adventure_bot"
+      },
+      "chat": {
+        "id": 590608764,
+        "first_name": "Grisha",
+        "last_name": "Batov",
+        "username": "diamondik21",
+        "type": "private"
+      },
+      "date": 1673303909,
+      "text": "1. Main story\n2. Story by community",
+      "reply_markup": {
+        "inline_keyboard": [
+          [
+            {
+              "text": "1",
+              "callback_data": "1"
+            }
+          ],
+          [
+            {
+              "text": "2",
+              "callback_data": "2"
+            }
+          ]
+        ]
+      }
+    },
+    "chat_instance": "-175684686528873525",
+    "data": "1"
+  }
+}
