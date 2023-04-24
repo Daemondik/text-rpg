@@ -78,7 +78,11 @@ func (r Repository) AddProfileProgress(pp structures.ProfileProgress) error {
 func (r Repository) LastStoryLineByProfile(p *structures.Profile) (structures.StoryLine, error) {
 	var profileProgress *structures.ProfileProgress
 
-	r.db.Table("profile_progresses").Where("story_id=? AND profile_id=?", p.SelectedStoryID, p.ID).Preload("StoryLine").Preload("StoryLine.StoryLineChoices").First(&profileProgress)
+	r.db.Table("profile_progresses").
+		Where("story_id=? AND profile_id=?", p.SelectedStoryID, p.ID).
+		Preload("StoryLine").
+		Preload("StoryLine.StoryLineChoices").
+		Last(&profileProgress)
 
 	return profileProgress.StoryLine, nil
 }

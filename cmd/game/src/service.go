@@ -67,6 +67,9 @@ func (g *GameService) CreateProfileIfNotExist(ps structures.ProfileSource) (*str
 		return nil, err
 	}
 	if p.ID == 0 {
+		p = structures.Profile{
+			ProfileSource: ps,
+		}
 		p, err = g.repo.CreateNewProfile(p)
 		if err != nil {
 			return nil, err

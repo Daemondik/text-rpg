@@ -63,7 +63,8 @@ func handleMsg(body *webhookReqBody) error {
 				if err != nil {
 					return err
 				}
-				if len(progress.StoryLine.StoryLineChoices) <= storyChoice {
+
+				if len(progress.StoryLine.StoryLineChoices) >= storyChoice {
 					for choiceCount, choice := range progress.StoryLine.StoryLineChoices {
 						choiceCount++
 						if choiceCount == storyChoice {
@@ -80,7 +81,7 @@ func handleMsg(body *webhookReqBody) error {
 					return errors.New("нет такого варианта ответа")
 				}
 			} else {
-				return errors.New("нет такого варианта ответа")
+				return errors.New("неправильное состаяние клиента")
 			}
 		}
 	}
